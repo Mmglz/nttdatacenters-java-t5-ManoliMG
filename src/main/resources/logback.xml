@@ -1,0 +1,21 @@
+<configuration packagingData="false" debug="true">
+
+	<timestamp key="logDate" datePattern="dd-MM-yyyy" />
+
+	<appender name="LogDatabaseEmpleadosExcel" class="ch.qos.logback.core.FileAppender">
+		<file>C:\dev\logs\logDatabaseEmpleadosExcel-${logDate}.log</file>
+		<append>false</append>
+		<immediateFlush>true</immediateFlush>
+		
+		<encoder>
+			<pattern>%d{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{45} - [%method] - %msg%n </pattern>
+		</encoder>
+
+	</appender>
+
+
+	<root level="info">
+		<appender-ref ref="LogDatabaseEmpleadosExcel" />
+	</root>
+
+</configuration>
